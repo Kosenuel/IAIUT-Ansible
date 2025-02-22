@@ -78,6 +78,9 @@ This project is licensed under the **MIT License**. See the `LICENSE` files in e
 ## Contributing
 Feel free to fork this repository and submit pull requests. Follow the code style and guidelines in each role’s `README.md`.
 
+**Thanks!** 
+*For issues, open a GitHub ticket or contact [kosenuel@gmail.com](mailto:kosenuel@gmail.com).*
+
 ---
 ---
 
