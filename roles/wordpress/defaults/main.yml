@@ -3,11 +3,16 @@
 update_packages: true
 extra_packages:
   - git
+  - mysql
   - make
   - rpm-build
   - cargo
   - openssl-devel
   - rust
+  - policycoreutils-python-utils
+  - wget
+  - python3 
+  - python3-pip
 
   # Amazon EFS configuration
 efs_id: "fs-0a3c4f63ad03674fd" # Update this guy with the EFS ID

@@ -19,5 +19,8 @@
       - policycoreutils-python-utils
       - python3 
       - python3-pip
+      - nfs-utils
+      - stunnel
+      - bind-utils
     state: present
   become: yes

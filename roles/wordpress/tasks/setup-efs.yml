@@ -11,11 +11,16 @@
       args:
         chdir: /tmp/efs-utils
       become: yes
+
     - name: Install amazon-efs-utils rpm
-      ansible.builtin.yum:
-        name: "/tmp/efs-utils/build/amazon-efs-utils*rpm"
-        state: present
+      ansible.builtin.command: rpm -i /tmp/efs-utils/build/amazon-efs-utils*rpm
       become: yes
+
+    # - name: Install amazon-efs-utils rpm
+    #   ansible.builtin.yum:
+    #     name: "/tmp/efs-utils/build/amazon-efs-utils*rpm"
+    #     state: present
+    #   become: yes
   when: ansible_facts.package['amazon-efs-utils'] is not defined
 
 - name: Ensure that the EFS mount directory exists

@@ -22,12 +22,17 @@
       when: efs_utils_installed.rc != 0
 
     - name: Install amazon-efs-utils rpm
-      ansible.builtin.yum:
-        name: "/tmp/efs-utils/build/amazon-efs-utils*rpm"
-        state: present
+      command: rpm -i /tmp/efs-utils/build/amazon-efs-utils*rpm
       become: yes
       when: efs_utils_installed.rc != 0
-  when: ansible_facts.package['amazon-efs-utils'] is not defined
+
+  #   - name: Install amazon-efs-utils rpm
+  #     ansible.builtin.yum:
+  #       name: "/tmp/efs-utils/build/amazon-efs-utils*rpm"
+  #       state: present
+  #     become: yes
+  #     when: efs_utils_installed.rc != 0
+  # when: ansible_facts.package['amazon-efs-utils'] is not defined
 
 - name: Ensure that the EFS mount directory exists
   ansible.builtin.file:
