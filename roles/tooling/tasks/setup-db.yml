@@ -46,7 +46,7 @@
 - name: Update application database connection in functions.php
   ansible.builtin.replace:
     path: "{{ web_root }}/functions.php"
-    regexp: "\$db\s*=\s*mysqli_connect\(['\"][^'\"].*?\);"
-    replace: "\$db = mysqli_connect('{{ db_host }}', '{{ db_admin_user }}', '{{ db_admin_pass }}', '{{ app_db_name }}');"
+    regexp: '\\$db\\s*=\\s*mysqli_connect\\(['\"][^'\"].*?\\);'
+    replace: "$db = mysqli_connect('{{ db_host }}', '{{ db_admin_user }}', '{{ db_admin_pass }}', '{{ app_db_name }}');"
     become: yes
 
