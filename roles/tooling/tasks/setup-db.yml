@@ -24,7 +24,7 @@
     state: present
 
 - name: Set up database user privileges
-  community.mysql_user:
+  community.mysql.mysql_user:
     login_host: "{{ db_host }}"
     login_user: "{{ db_admin_user }}"
     login_password: "{{ db_admin_pass }}"
