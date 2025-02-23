@@ -35,6 +35,7 @@
     state: present
   
 - name: Import database schema
+  block:
   community.mysql.mysql_db: 
     login_host: "{{ db_host }}"
     login_user: "{{ db_admin_user }}"
@@ -42,6 +43,10 @@
     name: "{{ app_db_name }}"
     state: import
     target: "{{ repo_clone_path }}/tooling-db.sql"
+  rescue:
+    - name: Log import error 
+      ansible.builtin.debug:
+        msg: "Database schema import failed, but continuing with the playbook. -This issue is likely due to the database schema already existing. "
 
 - name: Update application database connection in functions.php
   ansible.builtin.replace:
