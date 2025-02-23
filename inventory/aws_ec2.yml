@@ -7,7 +7,7 @@ regions:
 strict: False
 
 keyed_groups:
-  - key: tags 
+  - key: tags.Name 
     prefix: tag 
 
 filters: 
