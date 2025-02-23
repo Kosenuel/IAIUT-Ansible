@@ -7,14 +7,15 @@
 
 - name: Install extra system dependencies
   ansible.builtin.yum:
-    - git
-    - mysql
-    - make
-    - rpm-build
-    - cargo
-    - openssl-devel
-    - rust
-    - wget
-    - policycoreutils-python-utils
+    name:
+      - git
+      - mysql
+      - make
+      - rpm-build
+      - cargo
+      - openssl-devel
+      - rust
+      - wget
+      - policycoreutils-python-utils
   state: present
   become: yes
