@@ -17,5 +17,5 @@
       - rust
       - wget
       - policycoreutils-python-utils
-  state: present
+    state: present
   become: yes
