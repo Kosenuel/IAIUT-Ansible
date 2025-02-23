@@ -1,4 +1,11 @@
 ---
+- name: Create webroot directory
+  ansible.builtin.file:
+    path: "{{  web_root }}"
+    state: directory
+    mode: '0755'
+  become: yes
+
 - name: Install httpd, mod_ssl, and Php packages
   ansible.builtin.yum:
     name:
