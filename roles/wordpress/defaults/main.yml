@@ -10,8 +10,8 @@ extra_packages:
   - rust
 
   # Amazon EFS configuration
-efs_id: "EFS-ID"
-wordpress_ap_id: "WORDPRESS-AP-ID"
+efs_id: "fs-0a3c4f63ad03674fd" # Update this guy with the EFS ID
+wordpress_ap_id: "fsap-0b44a6e78693068c4" # Update this guy with the WordPress Access Point ID
 efs_mount: "/var/www"
 
 # Apache & Php configuration
@@ -36,7 +36,7 @@ wordpress_dir: "/var/www/html"
 wp_config: "/var/www/html/wp-config.php"
 
 # Databse configuration
-rds_endpoint: "RDS-ENDPPOINT"
+rds_endpoint: "terraform-20250223130611678200000008.c3e2qugyuyx8.eu-west-2.rds.amazonaws.com" # Update this guy with the RDS endpoint
 db_admin_user: "admin"
 db_admin_pass: "devopsacts"
 db_name: "wordpressdb"

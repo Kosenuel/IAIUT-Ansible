@@ -14,4 +14,4 @@ healthz_mode: "0644"
 nginx_conf_path: /etc/nginx/nginx.conf
 
 # Proxy settings (for internal app load balancer dns name)
-internal_alb_dns_name: "{INT-ALB-DNS-NAME}"
+internal_alb_dns_name: "internal-int-alb-1849253398.eu-west-2.elb.amazonaws.com"
