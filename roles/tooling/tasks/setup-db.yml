@@ -48,5 +48,5 @@
     path: "{{ web_root }}/functions.php"
     regexp: "\\$db\\s*=\\s*mysqli_connect\\(['\\\"][^'\\\"]*?\\);"
     replace: "$db = mysqli_connect('{{ db_host }}', '{{ db_admin_user }}', '{{ db_admin_pass }}', '{{ app_db_name }}');"
-    become: yes
+  become: yes
 
