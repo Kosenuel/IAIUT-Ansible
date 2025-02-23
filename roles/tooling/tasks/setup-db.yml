@@ -36,13 +36,14 @@
   
 - name: Import database schema
   block:
-  community.mysql.mysql_db: 
-    login_host: "{{ db_host }}"
-    login_user: "{{ db_admin_user }}"
-    login_password: "{{ db_admin_pass }}"
-    name: "{{ app_db_name }}"
-    state: import
-    target: "{{ repo_clone_path }}/tooling-db.sql"
+    - name: "Import database schema"
+      community.mysql.mysql_db: 
+        login_host: "{{ db_host }}"
+        login_user: "{{ db_admin_user }}"
+        login_password: "{{ db_admin_pass }}"
+        name: "{{ app_db_name }}"
+        state: import
+        target: "{{ repo_clone_path }}/tooling-db.sql"
   rescue:
     - name: Log import error 
       ansible.builtin.debug:
