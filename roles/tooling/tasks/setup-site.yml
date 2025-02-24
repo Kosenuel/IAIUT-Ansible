@@ -13,7 +13,6 @@
     dest: "{{ web_root }}/"
     mode: '0755'
     remote_src: yes
-    recursive: yes
   # when: (web_root_contents.stdout | trim) == ""
   become: yes
 
