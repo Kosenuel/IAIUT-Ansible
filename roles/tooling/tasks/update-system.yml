@@ -27,6 +27,8 @@
 
 - name: Install Boto3 and botocore
   ansible.builtin.pip:
-    name: boto3 botocore
+    name: 
+      - boto3 
+      - botocore
     state: present
   become: yes
