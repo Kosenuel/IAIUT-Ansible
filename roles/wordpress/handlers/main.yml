@@ -13,5 +13,5 @@
   become: yes
   
 - name: Restore SELinux context
-  ansible.builtin.command: restorecon -RV {{ wordpress_dir }}
+  ansible.builtin.command: "restorecon -Rv {{ wordpress_dir }}"
   become: yes

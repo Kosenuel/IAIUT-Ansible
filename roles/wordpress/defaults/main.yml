@@ -13,6 +13,9 @@ extra_packages:
   - wget
   - python3 
   - python3-pip
+  - nfs-utils
+  - stunnel
+  - bind-utils
 
   # Amazon EFS configuration
 efs_id: "fs-0a3c4f63ad03674fd" # Update this guy with the EFS ID
