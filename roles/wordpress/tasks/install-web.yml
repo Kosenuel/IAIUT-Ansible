@@ -11,6 +11,13 @@
     state: present
   become: yes
 
+- name: Create webroot directory
+  ansible.builtin.file:
+    path: "{{  wordpress_dir }}"
+    state: directory
+    mode: '0755'
+  become: yes
+
 - name: Enable and start httpd and php-fpm services
   ansible.builtin.service:
     name: "{{ item }}"

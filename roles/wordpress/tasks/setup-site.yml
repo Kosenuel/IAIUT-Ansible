@@ -32,6 +32,14 @@
     mode: "0644"
   become: yes
 
+- name: Apply SELinux file context to web root files and directories
+  community.general.sefcontext:
+    target: "{{ wordpress_dir }}(/.*)?"
+    setype: httpd_sys_rw_content_t
+    state: present
+  become: yes
+  notify: Restore SELinux context
+
 - name: Create a simple health check file for WordPress (majorly for the loadbalancers to utilize in knowing the state of the machine)
   ansible.builtin.copy:
     dest: "{{ wordpress_dir }}/healthz"
