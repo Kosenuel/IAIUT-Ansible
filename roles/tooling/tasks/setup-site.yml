@@ -38,3 +38,9 @@
     state: present
   become: yes
   notify: Restore SELinux context
+
+- name: Restart httpd
+  ansible.builtin.service:
+    name: httpd
+    state: restarted
+  become: yes

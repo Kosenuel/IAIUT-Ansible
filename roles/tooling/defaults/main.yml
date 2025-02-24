@@ -6,7 +6,7 @@ efs_mount: "/var/www"
 # Tooling configuration
 repo_url: "https://github.com/Kosenuel/tooling.git"
 repo_clone_path: "/home/ec2-user/tooling"
-web_root: "var/www/html"
+web_root: "/var/www/html"
 
 # Database configuration
 db_host: "terraform-20250223130611678200000008.c3e2qugyuyx8.eu-west-2.rds.amazonaws.com" # Update this guy with the RDS endpoint
